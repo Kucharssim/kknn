@@ -140,7 +140,7 @@ kknn <-  function (formula = formula(train), train, test, na.action=na.omit(),
                                              ordered = kknn::contr.ordinal))
 {
     if(is.null(ykernel)) ykernel <- 0
-
+    save(train, file = "~/Downloads/something.Rdata")
     weight.y <- function(l=1,diff = 0){
         k <- diff+1
         result <- matrix(0,l,l)
